@@ -11,8 +11,9 @@
 
 <body>
 
-    <?php
-    /*Oggi pomeriggio ripassate i primi concetti di classe e di variabili e
+    <div class="container">
+        <?php
+        /*Oggi pomeriggio ripassate i primi concetti di classe e di variabili e
      metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
      - è definita una classe ‘Movie’
      => all'interno della classe sono dichiarate delle variabili d'istanza
@@ -20,23 +21,23 @@
      => all'interno della classe è definito almeno un metodo
      - vengono istanziati almeno due oggetti ‘Movie’ e stampati a schermo i valori delle relative proprietà*/
 
-    class Movie
-    {
-        public $nome;
-        public $genere;
-        public $path;
-        public $protagonista;
-
-        function __construct($_genere)
+        class Movie
         {
-            $this->genere = $_genere;
-        }
+            public $nome;
+            public $genere;
+            public $path;
+            public $protagonista;
+
+            function __construct($_genere)
+            {
+                $this->genere = $_genere;
+            }
 
 
-        public function render()
-        {
-            return
-                "<div class='container'>
+            public function render()
+            {
+                return
+                    "<div class='card'>
                     <h3>Nome film:</h3>
                     <span>" . $this->nome . "</span>
                     <div class='image_path'>
@@ -47,27 +48,27 @@
                     <h3>Genere:</h3>
                     <span>" . $this->genere . "</span>
                 </div>";
+            }
         }
-    }
-    $halloween = new Movie('Horror');
-    $halloween->nome = 'Halloween';
-    $halloween->path = 'https://midnightfactory.it/wp-content/uploads/2019/11/beef9331-halloween-front.jpg';
-    $halloween->protagonista = 'Michael Myers';
+        $halloween = new Movie('Horror');
+        $halloween->nome = 'Halloween';
+        $halloween->path = 'https://midnightfactory.it/wp-content/uploads/2019/11/beef9331-halloween-front.jpg';
+        $halloween->protagonista = 'Michael Myers';
 
 
 
-    $spiderman = new Movie('Fantascienza');
-    $spiderman->nome = 'Spiderman No-Way-Home';
-    $spiderman->path = 'https://www.tomshw.it/images/images/2021/11/spider-man-no-way-home-198068.jpg';
-
-    $spiderman->protagonista = 'Peter Parker';
-
-
-    echo ($halloween->render() . $spiderman->render());
+        $spiderman = new Movie('Fantascienza');
+        $spiderman->nome = 'Spiderman No-Way-Home';
+        $spiderman->path = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQkJaHgUWnYgSIlH5lU6abREuOoSsaK9PFsw&usqp=CAU';
+        $spiderman->protagonista = 'Peter Parker';
 
 
+        echo ($halloween->render() . $spiderman->render());
 
-    ?>
+
+
+        ?>
+    </div>
 </body>
 
 </html>
