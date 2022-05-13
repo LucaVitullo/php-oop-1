@@ -57,7 +57,7 @@
 
 
     $spiderman = new Movie('Fantascienza');
-    $spiderman->nome = 'Spiderman';
+    $spiderman->nome = 'Spiderman No-Way-Home';
     $spiderman->path = 'https://www.tomshw.it/images/images/2021/11/spider-man-no-way-home-198068.jpg';
 
     $spiderman->protagonista = 'Peter Parker';
