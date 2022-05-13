@@ -9,8 +9,17 @@
     background-color: gold;
     margin: 10px;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.image_path img {
+    width: 10%;
 }
 
 .container>* {
     margin: 5px;
+    display: block;
 }
